@@ -1,308 +1,69 @@
 @extends('layouts')
+@section('title', 'Portfolio')
+@section('meta_keywords', 'ajavon ayi daniel, ajavon daniel, ajavon, developpeur')
+@section('meta_robots', 'index, follow')
 @section('content')
 <!-- Portfolio Section Start -->
+@php
+    $categories = $projects->pluck('categorie')->unique();
+@endphp
+
 <div class="cv_portfolio_wrapper">
     <div class="cv_container container-fluid">
       <div class="row">
         <div class="col-12">
           <ul class="cv_port_tab">
-            <li>
-              <a class="active" data-rel="tab-1" href="javascript:void(0)">All</a>
-            </li>
-            <li>
-              <a class="" data-rel="tab-2" href="javascript:void(0)">Website</a>
-            </li>
-            <li>
-              <a class="" data-rel="tab-3" href="javascript:void(0)">Mobile App</a>
-            </li>
-            <li>
-              <a class="" data-rel="tab-4" href="javascript:void(0)">Dashboard</a>
-            </li>
-            <li>
-              <a class="" data-rel="tab-5" href="javascript:void(0)">Creative</a>
-            </li>
-          </ul>
-          <!-- All Tab -->
-          <div class="cv_tab_pane " id="tab-1" style="display:block;">
-            <div class="cv_gallery_wrapper">
-              <div class="cv_gallery_item item-1">
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-1">
-                    <img src="assets/images/port-1.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-2">
-                    <img src="assets/images/port-2.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-                <div class="cv_gallery_img img-3">
-                  <img src="assets/images/port-5.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-              </div>
-              <div class="cv_gallery_item item-2">
-                <div class="cv_gallery_img img-4">
-                  <img src="assets/images/port-3.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-5">
-                    <img src="assets/images/port-4.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-6">
-                    <img src="assets/images/port-6.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Website Tab -->
-          <div class="cv_tab_pane" id="tab-2">
-            <div class="cv_gallery_wrapper">
-              <div class="cv_gallery_item item-1">
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-1">
-                    <img src="assets/images/port-1.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-2">
-                    <img src="assets/images/port-2.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-                <div class="cv_gallery_img img-3">
-                  <img src="assets/images/port-5.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-              </div>
-              <div class="cv_gallery_item item-2">
-                <div class="cv_gallery_img img-4">
-                  <img src="assets/images/port-3.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-5">
-                    <img src="assets/images/port-4.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-6">
-                    <img src="assets/images/port-6.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Mobile Tab -->
-          <div class="cv_tab_pane" id="tab-3">
-            <div class="cv_gallery_wrapper">
-              <div class="cv_gallery_item item-1">
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-1">
-                    <img src="assets/images/port-1.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-2">
-                    <img src="assets/images/port-2.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-                <div class="cv_gallery_img img-3">
-                  <img src="assets/images/port-5.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-              </div>
-              <div class="cv_gallery_item item-2">
-                <div class="cv_gallery_img img-4">
-                  <img src="assets/images/port-3.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-5">
-                    <img src="assets/images/port-4.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-6">
-                    <img src="assets/images/port-6.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Dashboard Tab -->
-          <div class="cv_tab_pane" id="tab-4">
-            <div class="cv_gallery_wrapper">
-              <div class="cv_gallery_item item-1">
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-1">
-                    <img src="assets/images/port-1.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-2">
-                    <img src="assets/images/port-2.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-                <div class="cv_gallery_img img-3">
-                  <img src="assets/images/port-5.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-              </div>
-              <div class="cv_gallery_item item-2">
-                <div class="cv_gallery_img img-4">
-                  <img src="assets/images/port-3.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-5">
-                    <img src="assets/images/port-4.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-6">
-                    <img src="assets/images/port-6.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Creative Tab -->
-          <div class="cv_tab_pane" id="tab-5">
-            <div class="cv_gallery_wrapper">
-              <div class="cv_gallery_item item-1">
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-1">
-                    <img src="assets/images/port-1.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-2">
-                    <img src="assets/images/port-2.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-                <div class="cv_gallery_img img-3">
-                  <img src="assets/images/port-5.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-              </div>
-              <div class="cv_gallery_item item-2">
-                <div class="cv_gallery_img img-4">
-                  <img src="assets/images/port-3.webp" class="img-fluid">
-                  <span class="cv_gallery_hover">
-                    <p>Website</p>
-                    <h4>Creative Website</h4>
-                  </span>
-                </div>
-                <div class="cv_gallery_small">
-                  <div class="cv_gallery_img img-5">
-                    <img src="assets/images/port-4.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                  <div class="cv_gallery_img img-6">
-                    <img src="assets/images/port-6.webp" class="img-fluid">
-                    <span class="cv_gallery_hover">
-                      <p>Website</p>
-                      <h4>Creative Website</h4>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <li><a class="active" data-rel="tab-all" href="javascript:void(0)">All</a></li>
+            @foreach($categories as $index => $category)
+                <li><a data-rel="tab-{{ $index + 1 }}" href="javascript:void(0)">{{ $category }}</a></li>
+            @endforeach
+        </ul>
+          <!-- Tous les projets -->
+<div class="cv_tab_pane" id="tab-all" style="display:block;">
+  <div class="cv_gallery_wrapper">
+    @foreach($projects as $portfolio)
+      <div class="cv_gallery_img">
+        <a href="{{ route('portfolio.show', $portfolio->id) }}">
+          <img src="{{ asset('images/' . $portfolio->image) }}" class="img-fluid">
+        </a>
+        <span class="cv_gallery_hover">
+          <p>{{ $portfolio->categorie }}</p>
+          <h4>{{ $portfolio->nomProjet }}</h4>
+        </span>
+      </div>
+    @endforeach
+  </div>
+</div>
+
+
+
+
+<!-- Par catégorie -->
+@foreach($categories as $index => $category)
+  <div class="cv_tab_pane" id="tab-{{ $index + 1 }}">
+    <div class="cv_gallery_wrapper">
+      @foreach($projects->where('categorie', $category) as $portfolio)
+        <div class="cv_gallery_img">
+          <a href="{{ route('portfolio.show', $portfolio->id) }}">
+            <img src="{{ asset('images/' . $portfolio->image) }}" class="img-fluid">
+          </a>
+          <span class="cv_gallery_hover">
+            <p>{{ $portfolio->categorie }}</p>
+            <h4>{{ $portfolio->nomProjet }}</h4>
+          </span>
         </div>
-        <div class="col-12">
-          <div class="cv_bottom_btn">
-            <a href="javascript:void(0)" class="cv_btn">View More</a>
-          </div>
-        </div>
+      @endforeach
+    </div>
+  </div>
+@endforeach
+      </div>
+    </div>
+    
+
+<!-- Par catégorie -->
+
+
+        
       </div>
     </div>
   </div>
@@ -321,3 +82,19 @@
   </div>
   <!-- Footer Section End -->
   @endsection
+
+  <script>
+    $(document).ready(function () {
+      $('.cv_port_tab li a').on('click', function () {
+        var target = $(this).data('rel');
+  
+        $('.cv_port_tab li a').removeClass('active');
+        $(this).addClass('active');
+  
+        $('.cv_tab_pane').hide();
+  
+        $('#' + target).fadeIn();
+      });
+    });
+  </script>
+  

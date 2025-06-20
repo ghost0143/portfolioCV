@@ -1,4 +1,7 @@
 @extends('layouts')
+@section('title', 'Mes compétences')
+@section('meta_keywords', 'ajavon ayi daniel, ajavon daniel, ajavon, developpeur')
+@section('meta_robots', 'index, follow')
 @section('content')
 <!-- Do Section Start -->
 <div class="cv_do_wrapper">

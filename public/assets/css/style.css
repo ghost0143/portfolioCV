@@ -450,7 +450,7 @@ section{
 *******************************************************/
 
 .cv_banner_wrapper {
-    background-image: url(../images/banner-bg.webp);
+    background-image: url(../images/port-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -459,6 +459,10 @@ section{
     position: relative;
     padding-top: 139px;
     overflow: hidden;
+}
+
+.img-fluid-cus{
+    width: 250px;
 }
 
 .cv_banner_wrapper::before {
@@ -509,10 +513,24 @@ section{
     margin: auto;
 }
 
-.cv_banner_img .bnr-boy{
+.cv_banner_img .bnr-boy {
     z-index: 1;
-    height: 100vh;
+    height: 100vh; /* hauteur plein écran */
 }
+
+@media (max-width: 576px) {
+    .cv_banner_img .bnr-boy {
+        height: 60vh; /* réduire la hauteur sur petits écrans */
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .cv_banner_img .bnr-boy {
+        height: 80vh;
+    }
+}
+
 
 .cv_banner_img .bnr-line {
     position: absolute;
@@ -558,6 +576,10 @@ section{
     transform-origin: 70% 70%;
     animation: wave-animation 2.5s infinite;
     max-width: 20%;
+}
+
+.cv_logo a img{
+    width: 150px;
 }
 
 @keyframes wave-animation {
@@ -652,6 +674,9 @@ section{
 .cv_about_img{
     position: relative;
 }
+
+
+
 
 .cv_about_img img{
     border-radius: 50px;
@@ -1195,7 +1220,7 @@ section{
     transition: var(--cv-transition);
 }
 
-.cv_gallery_img img{
+.cv_gallery_img a img{
     object-fit: cover;
 }
 
@@ -1897,6 +1922,10 @@ section{
     overflow: hidden;
 }
 
+.cv_form_wrapper .cv_contact_form{
+    height: 100vh;
+}
+
 .cv_form_wrapper::after{
     content: "";
     position: absolute;
@@ -1943,4 +1972,9 @@ section{
 .cv_contact_btn {
     display: flex;
     justify-content: flex-end;
+}
+
+.cv_about_info .edi{
+    border-radius: 20px;
+    width: 100%;
 }

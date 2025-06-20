@@ -7,27 +7,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--=== custom css ===-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
-    <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Stylesheets (normes Laravel) -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+
     <!--=== custom css ===-->
-    <title>Portfolio Responsive HTML Template</title>
-  </head>
+    <title>@yield('title', 'Accueil | Portfolio AJAVON Ayi Daniel')</title>
+    <meta name="description" content="@yield('meta_description', 'Description par défaut de votre site.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'mot-clé1, mot-clé2, mot-clé3')">
+    <meta name="robots" content="@yield('meta_robots', 'index, follow')">
+    <meta name="author" content="AJAVON Ayi daniel">
+    </head>
   <body>
     <div class="cv_main_wrapper">
       <!-- Loader Start -->
       <div class="loader">
         <div class="spinner">
-          <img src="assets/images/loader.gif" alt="loader" class="img-fluid">
+          <img src="{{ asset('assets/images/favicon.png') }}" alt="loader" class="img-fluid">
         </div>
       </div>
       <!-- Loader End -->
       <!-- Bottom To Top Start -->
       <div class="cv_top_icon">
         <a id="button">
-          <img src="assets/images/gototop.svg" class="img-fluid">
+          <img src="{{ asset('assets/images/gototop.svg') }}" class="img-fluid">
         </a>
       </div>
       <!-- Bottom To Top End -->
@@ -38,8 +44,8 @@
             <div class="col-12">
               <div class="cv_navbar">
                 <div class="cv_logo">
-                  <a href="index.html">
-                    <img src="assets/images/logo.png" class="img-fluid">
+                  <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/images/logo.png') }}" class="img-fluid img-fluid-cus">
                   </a>
                 </div>
                 <a href="javascript:void(0);" class="cv_toggle_btn">
@@ -65,48 +71,39 @@
               <div class="cv_menus_wrapper">
                 <ul class="cv_menus">
                   <li>
-                    <a class="active" href="{{ route('home') }}">Accueil</a>
+                    <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Accueil</a>
                   </li>
                   <li>
-                    <a href="{{ route('about') }}">À propos</a>
+                    <a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">À propos</a>
                   </li>
                   <li>
-                    <a href="{{ route('portfolio') }}">Mes réalisations</a>
+                    <a href="{{ route('portfolio') }}" class="{{ request()->routeIs('portfolio') ? 'active' : '' }}">Mes réalisations</a>
                   </li>
                   <li>
-                    <a href="{{ route('competence') }}">Compétences</a>
+                    <a href="{{ route('competence') }}" class="{{ request()->routeIs('competence') ? 'active' : '' }}">Compétences</a>
                   </li>
                   <li>
-                    <a href="{{ route('contact') }}">Contact</a>
+                    <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
                   </li>
-                  
-                  
                 </ul>
+
                 <div class="cv_header_social">
-                  <h4>Follow Me</h4>
+                  <h4>Mes réseaux</h4>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">
-                        <img src="assets/images/fb.svg">
+                      <a href="https://www.linkedin.com/in/ayidatech/" target="_blank">
+                        <img src="{{ asset('assets/images/fb.svg') }}" alt="Facebook">
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">
-                        <img src="assets/images/in.svg">
+                      <a href="https://www.facebook.com/profile.php?id=61568982433618" target="_blank">
+                        <img src="{{ asset('assets/images/in.svg') }}" alt="LinkedIn">
                       </a>
                     </li>
-                    <li>
-                      <a href="javascript:void(0);">
-                        <img src="assets/images/tw.svg">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">
-                        <img src="assets/images/pi.svg">
-                      </a>
                     </li>
                   </ul>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -117,15 +114,17 @@
 
 
     <!--=== Optional JavaScript ===-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/SmoothScroll.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.countTo.js"></script>
-    <script src="assets/js/ityped.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <!-- Scripts JS (version Laravel) -->
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/SmoothScroll.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.countTo.js') }}"></script>
+    <script src="{{ asset('assets/js/ityped.min.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+
     <!--=== Optional JavaScript ===-->
   </body>
 </html>

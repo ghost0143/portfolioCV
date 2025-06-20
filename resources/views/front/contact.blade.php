@@ -1,4 +1,7 @@
 @extends('layouts')
+@section('title', 'Contact')
+@section('meta_keywords', 'ajavon ayi daniel, ajavon daniel, ajavon, developpeur')
+@section('meta_robots', 'index, follow')
 @section('content')
 
   <!-- Address Section Start -->

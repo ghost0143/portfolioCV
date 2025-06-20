@@ -19,3 +19,7 @@ Route::get('/competence', [App\Http\Controllers\FrontController::class, 'compete
 Route::get('/portfolio', [App\Http\Controllers\FrontController::class, 'portfolio'])->name('portfolio');
 Route::get('/contact', [App\Http\Controllers\FrontController::class, 'contact'])->name('contact');
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'sendForm'])->name('contact.send');
+Route::get('/portfolio/{id}', [App\Http\Controllers\FrontController::class, 'show'])->name('portfolio.show');
+Route::get('/danielajavonG@21112002', [App\Http\Controllers\PortfolioController::class, 'formPortfolio'])->name('formPortfolio');
+Route::post('/daniel', [App\Http\Controllers\PortfolioController::class, 'create'])->name('createProject');
+

@@ -1,4 +1,7 @@
 @extends('layouts')
+@section('title', 'A propos')
+@section('meta_keywords', 'ajavon ayi daniel, ajavon daniel, ajavon, developpeur')
+@section('meta_robots', 'index, follow')
 @section('content')
 <!-- About Section Start -->
 <div class="cv_about_wrapper">
@@ -37,8 +40,10 @@
                 </p>
               </div>
               <div class="cv_about_btn">
-                <a href="javascript:void(0);" class="cv_btn">Télécharger mon CV</a>
-                <a href="javascript:void(0);" class="cv_btn">Me contacter en privé</a>
+                <a href="{{ asset('CV_AJAVON_Ayi_Daniel.pdf') }}" target="_blank" class="cv_btn" download>
+                    Télécharger mon CV
+                </a>
+                <a href="https://wa.me/91790660" target="_blank"  class="cv_btn">Contact direct</a>
               </div>
             </div>
           </div>
